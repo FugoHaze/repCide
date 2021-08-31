@@ -37,7 +37,7 @@ class registro{
     }
 }
 
-agregarPersona();
+//agregarPersona();
 
 
 ?>
