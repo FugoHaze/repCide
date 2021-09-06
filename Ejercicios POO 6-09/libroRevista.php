@@ -2,8 +2,8 @@
 include "materiales.php";
 class Libro extends Materiales{
     protected $editorial;
-    function __construct($editorial,$autor,$titulo,$year,$tipoMaterial,$nombreB){
-        parent::__construct($autor,$titulo,$year,$tipoMaterial,$nombreB);
+    function __construct($editorial,$autor,$titulo,$year,$tipoMaterial){
+        parent::__construct($autor,$titulo,$year,$tipoMaterial);
         $this->editorial=$editorial;
     }
     function setter($atri,$val){
@@ -22,8 +22,8 @@ class Libro extends Materiales{
     }
 }
 class Revista extends Materiales{
-    function __construct($autor,$titulo,$year,$tipoMaterial,$nombreB){
-        parent::__construct($autor,$titulo,$year,$tipoMaterial,$nombreB);
+    function __construct($autor,$titulo,$year,$tipoMaterial){
+        parent::__construct($autor,$titulo,$year,$tipoMaterial);
     }
     function setter($atri,$val){
         $this->$atri=$val;
@@ -42,12 +42,12 @@ class Revista extends Materiales{
 $obj=new Libro("Norma","Francisco","Cuentos",2012,"Libro","Panamericana");
 
 //echo $obj->getter("editorial");
-echo $obj->mostrarTodo();
+//echo $obj->mostrarTodo();
 
 $obj2=new Revista("Carlos","Glitch",2021,"Revista","Biblioteca Soacha");
 
-echo $obj2->mostrarTodo();
+//echo $obj2->mostrarTodo();
 
 
-echo $biblio1->mostrarTodo();
+//echo $biblio1->mostrarTodo();
 ?>

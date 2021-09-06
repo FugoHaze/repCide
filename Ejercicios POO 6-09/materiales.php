@@ -1,14 +1,13 @@
 <?php
 include "biblioteca.php";
 
-class Materiales extends Biblioteca{
+class Materiales{
     protected $autor;
     protected $titulo;
     protected $year;
     protected $tipoMaterial;
 
-    function __construct($autor,$titulo,$year,$tipoMaterial,$nombreB){
-        parent::__construct($nombreB);
+    function __construct($autor,$titulo,$year,$tipoMaterial){
         $this->autor=$autor;
         $this->titulo=$titulo;
         $this->year=$year;
