@@ -6,7 +6,7 @@ class Aprendiz extends Persona{
     private $ficha;
 
     function __construct($nombre,$documento,$ficha,$ciudad,$telefono){
-        parent::__construct();
+        parent::__construct($ciudad,$telefono);
         $this->nombre=$nombre;
         $this->documento=$documento;
         $this->ficha=$ficha;
@@ -41,7 +41,7 @@ class Aprendiz extends Persona{
 
 }
 
-$ob=new Aprendiz("Pedro",159487236,2142329);
+$ob=new Aprendiz("Pedro",159487236,2142329,"Soacha",320456789);
 
 echo $ob->getter("nombre").'<br>';
 echo $ob->getter("documento").'<br>';
