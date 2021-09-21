@@ -1,0 +1,105 @@
+html{
+	font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000, #272727);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    margin: auto;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    color: white;
+}
+
+.imgs{
+    height: 500px;
+    width: 500px;
+}
+
+/*Acá empieza el header, el menú de navegación*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 135px;
+    background-color: #131313;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+/*Bombilla*/
+.bulb {
+	margin-bottom:50px;
+}
+.bulb i {
+	color:rgb(126, 126, 126);
+	/* font-size:280px; */
+	transition:all 0.3s;
+}
+.bulb i.on {
+    background-color: white;
+	color:#ffffff;
+	text-shadow: 0 0 100px #ffffff;
+}
+.bulb table.on{
+    background-color: white;
+	color:#ffffff;
+	text-shadow: 0 0 100px #ffffff;
+}
+
+/*Switch*/
+.switch > input {
+	display:none;
+}
+.switch > label {
+	margin:auto;
+	display:block;
+	position:relative;
+	background:#d2d9e4;
+	width:112px;
+	height:56px;
+	/* border-radius: 30px; */
+	border: 2px solid #cad3dc;
+	cursor: pointer;
+}
+.switch > label:before {
+	content:"";
+	position:absolute;
+	width:52px;
+	height:52px;
+	background:#fff;
+	/* border-radius: 50%; */
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	left:0;
+	top:0;
+	transition:all 0.3s;
+}
+.switch > input:checked + label {
+	background: #ff2050;
+}
+.switch > input:checked + label:before {
+	left:56px;
+}
