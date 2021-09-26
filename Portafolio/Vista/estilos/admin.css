@@ -1,0 +1,53 @@
+body{
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table{
+    width: 800px;
+    text-align: center;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+th, td{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 7px;
+}
+th{
+    background-color: rgb(119, 119, 119);
+    border-bottom: solid 1px rgb(255, 0, 0);
+    color: white;
+}
+tr:nth-child(even){
+    background-color: ghostwhite;
+}
+tr:hover{
+    background-color: lightgreen;
+}
+h2, h3{
+    color: white;
+    text-align: center;
+}
+.btn{
+    border: solid 1px rgb(255, 255, 255);
+    outline: none;
+    border-radius: 15px;
+    padding: 1px 1px 1px 1px;
+    background-color: grey;
+    font-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+.btn:visited{
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+p{
+    text-align: center;
+}

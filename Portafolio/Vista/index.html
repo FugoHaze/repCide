@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Vista/estilos/estiloIndex.css">
+    <link rel="stylesheet" href="../Vista/estilos/styleIndex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../Vista/estilos/imagehover.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <header>
       <nav>
         <ul>
-          <li><a class="active" href="../Vista/index.html">Inicio</a></li>
+          <li><a class="actives" href="../Vista/index.html">Inicio</a></li>
           <li><a href="../Vista/crudIndex.php">CRUD</a></li>
           <li><a href="">Ejercicios de JS</a></li>
           <li><a href="">Ejercicios de PHP</a></li>
@@ -31,38 +31,44 @@
         <label for="check"></label>
       </div>
     </div>
+    <h4 id="msj">Prende la luz, está muy oscuro por acá</h4>
     
     <div class="bulb">
-      <i id="light">No se, cosas varias para ver xd></i>
-    </div>
-    
-    <h2 class="animate__animated animate__fadeInLeft">Portafolio de Programador</h2>
-    <p class="animate__animated animate__fadeInRight">Este va a ser la vista principal de Mi Portafolio</p>
-    <p class="animate__animated animate__fadeInLeft">Se va a encontrar cosas como un CRUD, Ejercicios de JS, Ejercicios de PHP y nuevos proyectos.</p>
-    <!--
+      <i id="light">
+        <p class="prueba">Hola</p>
+    <h2 class="prueba" class="animate__animated animate__fadeInLeft">Portafolio de Programador</h2>
+    <p class="prueba" class="animate__animated animate__fadeInRight">Este va a ser la vista principal de Mi Portafolio</p>
+    <p class="prueba" class="animate__animated animate__fadeInLeft">Se va a encontrar cosas como un CRUD, Ejercicios de JS, Ejercicios de PHP y nuevos proyectos.</p>
+      <h3>CRUD</h3>
+        
      <figure class="imghvr-shutter-out-diag-1">
-        <img class="imgs" src="../Vista/Images/mob.jpg" alt="example-image">
+        <img class="ima" class="imgs" src="../Vista/Images/crud.png" alt="crud">
         <figcaption>
-          <h3 class="ih-fade-down-big ih-delay-sm ">Prueba de Librerias</h3>
+          <h3 class="ih-fade-down-big ih-delay-sm ">CRUD</h3>
           <p class="ih-zoom-in ih-delay-md">
-            <i>"Pruebas para mostrar más adelante mis proyectos x1"</i>
+            <i>"Imágen tomada del Formulario que engloba el CRUD"</i>
           </p>
-          <a class="ih-fade-up ih-delay-lg button" href="#">Averiguar más</a>
+          <a class="ih-fade-up ih-delay-lg button" href="../Vista/crudIndex.php">Formulario</a>
         </figcaption>
-        <a href="#"></a>
+        <a href="../Vista/crudIndex.php"></a>
     </figure>
+  </i>
+    </div>
     <figure class="imghvr-shutter-out-diag-1">
-      <img class="imgs" src="../Vista/Images/mob.jpg" alt="example-image">
+      <img class="ima" class="imgs" src="../Vista/Images/admincrud.png" alt="admincrud">
       <figcaption>
-        <h3 class="ih-fade-down-big ih-delay-sm ">Prueba de Librerias</h3>
+        <h3 class="ih-fade-down-big ih-delay-sm ">AdminCrud</h3>
         <p class="ih-zoom-in ih-delay-md">
-          <i>"Pruebas para mostrar más adelante mis proyectos x2"</i>
+          <i>"Imágen tomada de la tabla de Administrador, donde se pueden ver y eliminar todos los datos registrados"</i>
         </p>
         <a class="ih-fade-up ih-delay-lg button" href="#">Averiguar más</a>
       </figcaption>
-      <a href="#"></a>
+      <a href="../Vista/adminIndex.php"></a>
   </figure> 
-    -->
+  <div class="switch">
+    <input type="checkbox" id="check">
+    <label for="check"></label>
+  </div>
     <script type="text/javascript" src="../Vista/Js/script.js"></script>
 </body>
 </html>

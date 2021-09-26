@@ -49,13 +49,17 @@ li a:hover:not(.active) {
     background-color: rgb(177, 177, 177);
     color: white;
 }
+/* .prueba{
+	color: black;
+	text-align: none;
+} */
 
 /*Bombilla*/
 .bulb {
 	margin-bottom:50px;
 }
 .bulb i {
-	color:rgb(126, 126, 126);
+	color:rgb(0, 0, 0);
 	/* font-size:280px; */
 	transition:all 0.3s;
 }
@@ -102,4 +106,9 @@ li a:hover:not(.active) {
 }
 .switch > input:checked + label:before {
 	left:56px;
+}
+
+.ima{
+	width: 600px;
+	height: 400px;
 }
