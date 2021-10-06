@@ -83,3 +83,5 @@ class Estudiante{
 
 //Por un token que expiró y volví a regenerar, se jodieron muchas cosas. Esto es una prueba para ver si
 //Puedo hacer push de forma tranquila en la casa :)
+
+//Al parecer si sirvió, esta es una prueba más, para asegurarme de que si funciona todo el temario
