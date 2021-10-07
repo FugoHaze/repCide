@@ -8,40 +8,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../Vista/estilos/imagehover.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Santiago_Sierra</title>
 </head>
 <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a class="actives" href="../Vista/index.html">Inicio</a></li>
-          <li><a href="../Vista/crudIndex.php">CRUD</a></li>
-          <li><a href="">Ejercicios de JS</a></li>
-          <li><a href="">Ejercicios de PHP</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div>
-      <!-- <div class="bulb">
-        <i id="light" class="fas fa-lightbulb"></i>
-      </div> -->
-      <div class="switch">
-        <input type="checkbox" id="check">
-        <label for="check"></label>
+    <div class="barra">
+      <div class="menu">
+        <div class="name">Portafolio</div>
+        <i class='bx bx-menu-alt-left' id="btn"></i>
       </div>
+      <ul class="lista">
+        <li>
+          <a href="#">
+            <i class='bx bxs-home'></i>
+            <span class="linkName">Inicio</span>
+          </a>
+          <span class="tooltip">Inicio</span>
+        </li>
+        <li>
+          <a href="../Vista/crudIndex.php">
+            <i class='bx bxs-folder'></i>
+            <span class="linkName">CRUD</span>
+          </a>
+          <span class="tooltip">CRUD</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxl-javascript'></i>
+            <span class="linkName">JavaScript</span>
+          </a>
+          <span class="tooltip">JavaScript</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-food-menu'></i>
+            <span class="linkName">Manual Usuario</span>
+          </a>
+          <span class="tooltip">Manual</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-skull'></i>
+            <span class="linkName">Sobre Mi</span>
+          </a>
+          <span class="tooltip">Sobre Mi</span>
+        </li>
+      </ul>
     </div>
-    <h4 id="msj">Prende la luz, está muy oscuro por acá</h4>
-    
-    <div class="bulb">
-      <i id="light">
-        <p class="prueba">Hola</p>
-    <h2 class="prueba" class="animate__animated animate__fadeInLeft">Portafolio de Programador</h2>
-    <p class="prueba" class="animate__animated animate__fadeInRight">Este va a ser la vista principal de Mi Portafolio</p>
-    <p class="prueba" class="animate__animated animate__fadeInLeft">Se va a encontrar cosas como un CRUD, Ejercicios de JS, Ejercicios de PHP y nuevos proyectos.</p>
-      <h3>CRUD</h3>
-        
-     <figure class="imghvr-shutter-out-diag-1">
+
+    <h2 class="prueba" id="typewriter"></h2>
+    <p class="prueba" id="">Bienvenidos a mi Portafolio</p>
+    <p class="prueba">Aquí encontrarás mis trabajos realizados a lo largo de toda mi carrera</p>
+    <p class="prueba">Se va a encontrar cosas como un CRUD, Ejercicios de JS, y futuros proyectos.</p>
+    <div class="crud">
+      <h1>CRUD</h1>
+        <p class="texto1"><strong>Descripción: <br></strong> Este es el CRUD realizado en base a Data Access Object (DAO).<br>
+          Está realizado también con el Modelo Vista Controlador. <br> <br>
+          Si quieres ir al Formulario ve a el siguiente link.
+        <br><a href="../Vista/crudIndex.php"><-- ESTE LINK --></a>
+        </p>
+      <div class="img1">
+       <figure class="imghvr-shutter-out-diag-1">
         <img class="ima" class="imgs" src="../Vista/Images/crud.png" alt="crud">
         <figcaption>
           <h3 class="ih-fade-down-big ih-delay-sm ">CRUD</h3>
@@ -51,10 +78,18 @@
           <a class="ih-fade-up ih-delay-lg button" href="../Vista/crudIndex.php">Formulario</a>
         </figcaption>
         <a href="../Vista/crudIndex.php"></a>
-    </figure>
-  </i>
+        </figure>
+      </div>
     </div>
-    <figure class="imghvr-shutter-out-diag-1">
+    <br>
+    <div class="admin">
+      <h1>AdminCrud</h1>
+      <p class="texto1"><strong>Descripción: <br></strong>Esto es una parte del CRUD, en específico el de Administración<br>
+        Está realizado también con el Modelo Vista Controlador. <br> <br>
+        Si quieres ir a la página ve a el siguiente link.
+      <br><a href="../Vista/crudIndex.php"><-- ESTE LINK --></a>
+      </p>
+      <figure class="imghvr-shutter-out-diag-1">
       <img class="ima" class="imgs" src="../Vista/Images/admincrud.png" alt="admincrud">
       <figcaption>
         <h3 class="ih-fade-down-big ih-delay-sm ">AdminCrud</h3>
@@ -64,11 +99,44 @@
         <a class="ih-fade-up ih-delay-lg button" href="#">Averiguar más</a>
       </figcaption>
       <a href="../Vista/adminIndex.php"></a>
-  </figure> 
-  <div class="switch">
-    <input type="checkbox" id="check">
-    <label for="check"></label>
-  </div>
-    <script type="text/javascript" src="../Vista/Js/script.js"></script>
+      </figure>
+    </div>
+    <div class="js">
+      <div class="fracciones">
+        <h1>JavaScript</h1>
+        <p class="texto1"><strong>Descripción: <br></strong>Aquí voy a mostrar los resultados de JS <br> <br>
+          Si quieres ir a la página ve a el siguiente link.
+        <br><a href="#"><-- ESTE LINK --></a>
+        </p>
+      </div>
+    </div>
+    <div class="manual">
+        <h1>Manual de Usuario</h1>
+        <p class="texto1"><strong>Descripción: <br></strong>Esta es una página en el que se explica como se realiza un <br>
+          Manual de Usuario para que lo pueda utilizar otras personas
+          <br> <br>
+          Si quieres ir a la página ve a el siguiente link.
+        <br><a href="#"><-- ESTE LINK --></a>
+        </p>
+    </div>
+    <div class="acerca">
+        <h1>Acerca de mi</h1>
+        <p class="texto1"><strong>Yo<br></strong>Soy un estudiante del tecnológo ADSI del SENA<br>
+          Esta página es una pequeña parte de mi poder como programador, cada día voy siendo mucho mejor en lo que hago.
+          <br> <br>
+          Si quieres ir a la página ve a el siguiente link.
+        <br><a href="#"><-- ESTE LINK --></a>
+        </p>
+    </div>
+
+    <footer>
+      <address>Santiago Sierra Bonilla - Desarrollador Web</address>
+      
+      <address>Contacto: <strong>santiago.ssb59@gmail.com</strong></address>
+      <address><a href="https://github.com/FugoHaze"><i class='bx bxl-github'></i></a></address>
+      <address>Todos los derechos reservados 2021</address>
+    </footer>
+     
+  <script type="text/javascript" src="../Vista/Js/script.js"></script>
 </body>
 </html>

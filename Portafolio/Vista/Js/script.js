@@ -1,13 +1,18 @@
-document.querySelector("#check").addEventListener("click",function(){
-	let bulb = document.querySelector("#light");
-	if(this.checked)
-		bulb.classList.add("on");
-	else
-		bulb.classList.remove("on");
+let btn = document.querySelector("#btn");
+let barra = document.querySelector(".barra");
 
-	// let bulb = document.querySelector("#table");
-	// if(this.checked)
-	// 	bulb.classList.add("on");
-	// else
-	// 	bulb.classList.remove("on");
-});
+btn.onclick = function() {
+	barra.classList.toggle("active");
+}
+
+
+function typewriter(element, text, delay = 100) {
+	for (let i = 0; i < text.length; i++) {
+	  setTimeout(() => {
+		element.innerHTML += text[i];
+	  }, delay * i);
+	}
+  }
+  const le = document.getElementsByClassName("prueba");
+  const el = document.getElementById("typewriter");
+  typewriter(el, "Mi Portafolio de Programador");

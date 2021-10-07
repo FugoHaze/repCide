@@ -1,114 +1,176 @@
 html{
 	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body{
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #000000, #000000, #272727);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #000000, #000000, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
     margin: auto;
     padding: 2px 2px 2px 2px;
     text-align: center;
     color: white;
+	min-height: 100vh;
+	width: 100%;
+	/* overflow: hidden; */
+	position: relative;
 }
-
+.ima{
+	width: 400px;
+	height: 200px;
+}
 .imgs{
     height: 500px;
     width: 500px;
 }
+.crud{
+	background-color: rgb(0, 0, 0);
+	width: 1300px;
+}
+.admin{
+	background-color: rgb(0, 0, 0);
+	width: 1300px;
+}
+.img1{
+	display: inline-block;
+	vertical-align: top;
+}
+.texto1{
+	display: inline-block;
+	vertical-align: top;
+}
 
 /*Acá empieza el header, el menú de navegación*/
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 135px;
-    background-color: #131313;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    color: white;
+.barra{
+	height: 100%;
+	width: 43px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 6px 14px;
+	background-color: rgb(43, 43, 43);
+	transition: all 0.5s ease;
 }
-
-li a {
-    display: block;
-    color: rgb(255, 255, 255);
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
+.barra.active{
+	width: 168px;
 }
-
-li a.active {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+.barra .menu{
+	height: 60px;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
-
-li a:hover:not(.active) {
-    background-color: rgb(177, 177, 177);
-    color: white;
+.barra .menu i{
+	font-size: 28px;
+	margin-right: 5px;
+}
+.barra .menu .name{
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.barra.active .menu .name{
+	opacity: 1;
+}
+.barra #btn{
+	position: absolute;
+	color: white;
+	left: 50%;
+	top: 6px;
+	font-size: 20px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	transform: translateX(-50%);
+}
+.barra.active #btn{
+	left: 90%;
+}
+.barra ul{
+	margin-top: 20px;
+}
+.barra ul li{
+	position: relative;
+	height: 50px;
+	width: 100%;
+	margin: 0 5px;
+	list-style: none;
+	line-height: 50px;
+}
+.barra ul li .tooltip{
+	position: absolute;
+	left: 122px;
+	top: 0;
+	transform: translate(-100%, -50%);
+	border-radius: 10px;
+	height: 35px;
+	width: 122px;
+	background-color: whitesmoke;
+	line-height: 35px;
+	text-align: center;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: 0.1s;
+	opacity: 0;
+	pointer-events: none;
+	color: black;
+	display: block;
+}
+.barra.active ul li .tooltip{
+	display: none;
+}
+.barra ul li:hover .tooltip{
+	top: 50%;
+	transition: all 0.5s ease;
+	opacity: 1;
+}
+.barra ul li a{
+	color: white;
+	left: 0;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	border-radius: 15px;
+	white-space: nowrap;
+}
+.barra ul li a:hover{
+	color: grey;
+	background-color: honeydew;
+}
+.barra ul li a i{
+	height: 50%;
+	left: 0%;
+	min-width: 50px;
+	border-radius: 12px;
+	line-height: 50px;
+	text-align: center;
+	transform: translateX(-100%);
+}
+.barra ul li .linkName{
+	opacity: 0;
+	pointer-events: auto;
+}
+.barra.active ul li .linkName{
+	opacity: 1;
+	pointer-events: auto;
+	text-align: center;
+	transform: translateX(-45%);
 }
 /* .prueba{
 	color: black;
 	text-align: none;
 } */
 
-/*Bombilla*/
-.bulb {
-	margin-bottom:50px;
+/*Footer */
+footer{
+	background-color: #020101;
 }
-.bulb i {
-	color:rgb(0, 0, 0);
-	/* font-size:280px; */
-	transition:all 0.3s;
-}
-.bulb i.on {
-    background-color: white;
-	color:#ffffff;
-	text-shadow: 0 0 100px #ffffff;
-}
-.bulb table.on{
-    background-color: white;
-	color:#ffffff;
-	text-shadow: 0 0 100px #ffffff;
-}
-
-/*Switch*/
-.switch > input {
-	display:none;
-}
-.switch > label {
-	margin:auto;
-	display:block;
-	position:relative;
-	background:#d2d9e4;
-	width:112px;
-	height:56px;
-	/* border-radius: 30px; */
-	border: 2px solid #cad3dc;
-	cursor: pointer;
-}
-.switch > label:before {
-	content:"";
-	position:absolute;
-	width:52px;
-	height:52px;
-	background:#fff;
-	/* border-radius: 50%; */
-	box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-	left:0;
-	top:0;
-	transition:all 0.3s;
-}
-.switch > input:checked + label {
-	background: #ff2050;
-}
-.switch > input:checked + label:before {
-	left:56px;
-}
-
-.ima{
-	width: 600px;
-	height: 400px;
+footer i{
+	font-size: 100px;
 }
