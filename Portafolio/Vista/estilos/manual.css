@@ -1,0 +1,36 @@
+html{
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000, #272727);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 auto;
+    padding: 2px 2px 2px 2px;
+    /* text-align: center; */
+    color: white;
+	min-height: 100vh;
+	width: 100%;
+	/* overflow: hidden; */
+	overflow-x: hidden;
+	position: relative;
+}
+h1, h2{
+    text-align: center;
+}
+#home{
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+.paso{
+    width: 800px;
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    /* background-color: rgb(32, 32, 32); */
+    background: -webkit-linear-gradient(to right, #000000, #000000, #272727);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
