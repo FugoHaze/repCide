@@ -1,0 +1,10 @@
+Para poder entrar al Portafolio
+
+-Todos los archivos se encuentran en la carpeta 'Portafolio'
+
+1. Guarda los archivos en la carpeta del Xampp, que se encuentra en tu disco local, en la carpeta xampp, busca 'htdocs' y ahí guardas los archivos.
+2. Activa en el xampp el Apache y el MySQL.
+3. En la carpeta 'Modelo' se encuentra la base de datos en un archivo mysql que se llama 'nosvivere.sql', ve a el administrador de la aplicación Xampp, crea una nueva base de datos
+llamada 'nosvivere'. y en la opción de Importar, busca el botón Examinar y coloca el archivo sql.
+4. En la carpeta 'Vista' se encuentra las vistas principales del portafolio, para abrir el archivo principal, coloca en el buscador
+ localhost/'nombre de la carpeta en donde guardaste el portafolio'/Portafolio/Vista/index.html
