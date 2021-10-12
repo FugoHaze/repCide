@@ -47,7 +47,7 @@ var sacarPromedio=(vec)=>{ //Función para sacar el promedio de un array
 
 var sacarMediana=(vec)=>{
     let orden=vec.sort((a,b)=>a-b); //Con "sort" se ordena los datos de menor a mayor
-    console.log(orden);
+    // console.log(orden);
     var l=vec.length;
     if (l%2==0) {
         let n=l/2;
@@ -95,7 +95,7 @@ var sacarDesviacion=(vec)=>{
     }
     
     let pro2 = x.reduce((a, b) => b += a)/x.length;
-    console.log(pro2)
+    // console.log(pro2)
     var dE=Math.sqrt(pro2);
     return dE.toFixed(2);
 }

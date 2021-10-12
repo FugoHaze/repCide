@@ -1,6 +1,6 @@
 html{
 	font-family: 'Courier New', Courier, monospace;
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -10,7 +10,7 @@ body{
     background: linear-gradient(to right, #000000, #000000, #272727); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0 auto;
     padding: 2px 2px 2px 2px;
-    text-align: center;
+    /* text-align: center; */
     color: white;
 	min-height: 100vh;
 	width: 100%;
@@ -45,9 +45,37 @@ body{
 	display: inline-block;
 	vertical-align: top;
 }
-.texto1{
+.texto1, .resultadosF, .resultadosFF{
+	/* display: inline-block; */
+	vertical-align: top;
+	text-align: center;
+}
+.texto{
 	display: inline-block;
 	vertical-align: top;
+	text-align: center;
+}
+.inicioT{
+	text-align: center;
+}
+h1, h2{
+	text-align: center;
+}
+.cod{
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+}
+#cod1, #cod2{
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px 5px 5px 5px;
+}
+pre{
+	margin:0 auto;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	/* border: solid 1px white; */
 }
 
 /*Acá empieza el header, el menú de navegación*/
@@ -163,7 +191,7 @@ body{
 }
 .barra ul li .linkName{
 	opacity: 0;
-	pointer-events: auto;
+	pointer-events: none;
 }
 .barra.active ul li .linkName{
 	opacity: 1;
@@ -179,6 +207,7 @@ body{
 /*Footer */
 footer{
 	background-color: #020101;
+	text-align: center;
 }
 footer i{
 	font-size: 100px;

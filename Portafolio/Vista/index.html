@@ -63,19 +63,21 @@
         </li>
       </ul>
     </div>
-
-    <a name="inicio"></a>
-    <h2 class="prueba" id="typewriter"></h2>
-    <p class="prueba" id="">Bienvenidos a mi Portafolio</p>
-    <p class="prueba">Aquí encontrarás mis trabajos realizados a lo largo de toda mi carrera</p>
-    <p class="prueba">Se va a encontrar cosas como un CRUD, Ejercicios de JS, y futuros proyectos.</p>
+    <div class="inicioT">
+      <a name="inicio"></a>
+      <h2 class="prueba" id="typewriter"></h2>
+      <p class="prueba" id="">Bienvenidos a mi Portafolio</p>
+      <p class="prueba">Aquí encontrarás mis trabajos realizados a lo largo de toda mi carrera</p>
+      <p class="prueba">Se va a encontrar cosas como un CRUD, Ejercicios de JS, y futuros proyectos.</p>
+    </div>
+    
     <!-- Cosa relacionada con el Crud -->
     <div class="crud">
       <a name="crud"></a>
       <h1>CRUD</h1>
       <div id="registro" class="sect">
         <h2>Registro</h2>
-          <p class="texto1"><strong>Descripción: <br></strong> Este es el CRUD realizado en base a Data Access Object (DAO).<br>
+          <p class="texto"><strong>Descripción: <br></strong> Este es el CRUD realizado en base a Data Access Object (DAO).<br>
             Está realizado también con el Modelo Vista Controlador. <br> <br>
             Si quieres ir al Formulario ve a el siguiente link.
           <br><a href="../Vista/crudIndex.php"><-- ESTE LINK --></a>
@@ -99,7 +101,7 @@
       <div id="admin" class="sect">
         <a name="admin"></a>
         <h2>AdminCrud</h2>
-        <p class="texto1"><strong>Descripción: <br></strong>Esto es una parte del CRUD, en específico el de Administración<br>
+        <p class="texto"><strong>Descripción: <br></strong>Esto es una parte del CRUD, en específico el de Administración<br>
           Está realizado también con el Modelo Vista Controlador. <br> <br>
           Si quieres ir a la página ve a el siguiente link.
         <br><a href="../Vista/adminIndex.php"><-- ESTE LINK --></a>
@@ -126,7 +128,7 @@
         <h2>Fracciones</h2>
         <p class="texto1"><strong>Descripción: <br></strong>Aquí voy a mostrar los resultados de las operaciones
           aritmeticas de fracciones en JS <br> 
-          Coloca digitos en los inputs y dale al botón 
+          Coloca digitos en los inputs y dale al botón de operar
         </p>
           <br>
           <br>
@@ -145,9 +147,77 @@
             <p id="multF"></p>
             <p id="divF"></p>
           </div>
+          <pre id="cod1" style="display: none;">
+// console.log(den1);
+
+var fraccion={
+    suma:function(a,b,c,d){ //Función de suma
+        if (c==d) {
+            let r1=a+b;
+                res=r1/c;
+        }else{
+            let r1=a*d;
+                r2=b*c;
+                r3=c*d;
+            var s=r1+r2;
+                res=s/r3;
+        }
+        // return res;
+        document.getElementById("sumaF").innerHTML= "Suma: "+res;
+    },
+    resta:function(a,b,c,d){ //Función de resta
+        if (c==d) {
+            let r1=a-b;
+                res=r1/c;
+        }else{
+            let r1=a*d;
+                r2=b*c;
+                r3=c*d;
+            var s=r1-r2;
+                res=s/r3;
+        }
+        // return res;
+        document.getElementById("restaF").innerHTML= "Resta: "+res;
+    },
+    mult:function(a,b,c,d){ //Función de Multiplicación
+        let r1=a*b;
+            r2=c*d;
+        var res=r1/r2;
+
+        // return res;
+        document.getElementById("multF").innerHTML= "Multiplicación: "+res;
+    },
+    div:function(a,b,c,d){ //Función de División
+        let r1=a*d;
+            r2=c*b;
+        var res=r1/r2;
+
+        // return res;
+        document.getElementById("divF").innerHTML= "División: "+res;
+    }
+}
+// document.getElementById("numeros").innerHTML= "Suma: "+res;
+
+function todo(){ //Toma los datos de los inputs y los coloca en las funciones
+    let n1=parseInt(document.getElementById("numerador1").value);
+        n2=parseInt(document.getElementById("numerador2").value);
+        d1=parseInt(document.getElementById("denominador1").value);
+        d2=parseInt(document.getElementById("denominador2").value);
+
+    fraccion.suma(n1,n2,d1,d2);
+    fraccion.resta(n1,n2,d1,d2);
+    fraccion.mult(n1,n2,d1,d2);
+    fraccion.div(n1,n2,d1,d2);
+}
+
+// document.getElementById("resFrac").innerHTML= s;
+          </pre>
           <br>
-          Si quieres ver el código completo ve a el siguiente link.
-        <br><a href="https://cutt.ly/sE0xpWR"><-- ESTE LINK --></a>
+          <button class="cod" onclick="codigo1M()">Mostrar Código</button><br>
+          <button class="cod" onclick="codigo1O()">Ocultar Código</button> 
+          <br>
+          <p style="text-align: center;">Si quieres ver el código completo en GITHUB ve a el siguiente link.
+        <br><a href="https://cutt.ly/sE0xpWR"><-- ESTE LINK --></a></p> 
       </div>
       <!-- Zona de resultados funciones flecha -->
       <div id="funcflecha" class="sect">
@@ -170,13 +240,123 @@
           <p id="mayorFF"></p>
           <p id="menorFF"></p>
         </div>
+        <pre id="cod2" style="display: none;">
+          //Inicio de funciones en formato flecha para el 28 de septiembre de 2021
+
+//Sumar elementos de un array
+
+var addVector=(vec,width)=>{ //Acá se agregan datos a un array
+    for (let i = 0; i < width; i++) {
+        vec.push(Math.round(Math.random()*100));        
+    }
+    return vec;
+}
+var v=[];
+    s=document.getElementById("datosFF").value;;
+
+var sumaVector=(vec)=>{ //Con esta función se agrega datos a una variable que va sumando los valores del array
+    let Resultado = vec.reduce((a, b) => b += a); //Forma más corta de sumar los valores de un array
+    return Resultado;
+}
+//Sacar el promedio de un array supongo :/
+//Voy a utilizar la misma función de agregar datos a un array para más comodidad
+
+var sacarPromedio=(vec)=>{ //Función para sacar el promedio de un array
+    let res = vec.reduce((a, b) => b += a); //Forma más corta de sumar los valores de un array
+    return res/vec.length;
+}
+
+//Sacar mediana de un array
+
+//Voy a utilizar la misma función de agregar datos a un array para más comodidad
+
+var sacarMediana=(vec)=>{
+    let orden=vec.sort((a,b)=>a-b); //Con "sort" se ordena los datos de menor a mayor
+    console.log(orden);
+    var l=vec.length;
+    if (l%2==0) {
+        let n=l/2;
+            n2=n-1;
+        var med=(vec[n]+vec[n2])/2;
+    }else{
+        let x=Math.floor(l/2);
+            med=vec[x];
+    }
+    return med;
+}
+
+//Sacar la moda de un array
+
+//Voy a utilizar la misma función de agregar datos a un array para más comodidad
+
+let xd=[1,1,1,1,2,22,3,4,5,6,7,7,7]
+//Voy a ser sincero y es que cogí este código de otra persona, porque no tenía ni idea de como hacer eso :(
+//https://platzi.com/clases/2327-javascript-practico/38669-calculando-la-moda-en-javascript/
+var sacarModa=(arr)=>{ 
+    var moda=arr.sort((a,b) =>arr.filter(v => v===a).length- arr.filter(v => v===b).length).pop();
+    return moda;
+}
+//Sacar la desviación tipica/estandar de un array
+
+var sacarDesviacion=(vec)=>{
+    let pro = vec.reduce((a, b) => b += a)/vec.length;
+        x=[];
+    for (let a = 0; a < vec.length; a++) {
+        var r=vec[a]-pro;
+            y=r*r;
+        x.push(y);
+    }
+    
+    let pro2 = x.reduce((a, b) => b += a)/x.length;
+    console.log(pro2)
+    var dE=Math.sqrt(pro2);
+    return dE.toFixed(2);
+}
+
+//Sacar numero mayor de un array
+
+var sacarMayor=(vec)=>{
+    let orden=vec.sort((a,b)=>a-b);
+    let x=Math.max(...vec);
+    return x;
+}
+
+//Sacar número menor de un array
+var sacarMenor=(vec)=>{
+    let x=Math.min(...vec);
+    return x;
+}
+
+function iniciarTodo(){
+    var v=[];
+        s=document.getElementById("datosFF").value;;
+    
+    document.getElementById("arrayFF").innerHTML= "Datos Array: "+addVector(v,s);
+
+    document.getElementById("sumaFF").innerHTML = "Suma: "+sumaVector(v);
+
+    document.getElementById("promedioFF").innerHTML = "Promedio: "+sacarPromedio(v);
+
+    document.getElementById("medianaFF").innerHTML = "Mediana: "+sacarMediana(v);
+
+    document.getElementById("modaFF").innerHTML = "Moda: "+sacarModa(v);
+
+    document.getElementById("desviacionFF").innerHTML = "Desviación: "+sacarDesviacion(v);
+
+    document.getElementById("mayorFF").innerHTML = "Mayor: "+sacarMayor(v);
+
+    document.getElementById("menorFF").innerHTML = "Menor: "+sacarMenor(v);
+}
+        </pre>
         <br>
-        Si quieres ver el código completo ve a el siguiente link.
-        <br><a href="https://cutt.ly/jE0xjXU"><-- ESTE LINK --></a>
+        <button class="cod" onclick="codigo2M()">Mostrar Código</button><br>
+        <button class="cod" onclick="codigo2O()">Ocultar Código</button> 
+        <p style="text-align: center;">Si quieres ver el código completo en GITHUB ve a el siguiente link.
+        <br><a href="https://cutt.ly/jE0xjXU"><-- ESTE LINK --></a></p> 
       </div>
       <div id="clases" class="sect">
         <h2>Herencia y Composición</h2>
-        <p>
+        <p class="texto1">
           <strong>Descripción: <br></strong>En el código se realiza una pequeña muestra de Herencia y Composición <br> 
           Se realiza con las clases Persona, Cliente, Empleado y Ventas. <br>
           En el que Cliente y Empleado son una Herencia de Persona <br>
@@ -184,8 +364,110 @@
           <br>
           Esto es en base a una tabla de una base de datos. <br>
         </p>
-        Si quieres ver el código ve a el siguiente link.
-        <br><a href="https://cutt.ly/AE0xczs"><-- ESTE LINK --></a>
+        <pre id="cod3" style="display: none;">         
+//CLIENTE y EMPLEADO son PERSONAS (Herencia), y VENTA tiene 1 CLIENTE y 1 EMPLEADO (Composición)
+
+class Persona{    
+    constructor(cedula, nombre, apellido){
+        this._cedula=cedula;
+        this._nombre=nombre;
+        this._apellido=apellido;
+    }
+    set cedula(cedula){
+        this._cedula=cedula;
+    }
+    get cedula(){
+        return this._cedula;
+    }
+    set nombre(nombre){
+        this._nombre=nombre;
+    }
+    get nombre(){
+        return this._nombre;
+    }
+    set apellido(apellido){
+        this._apellido=apellido;
+    }
+    get apellido(){
+        return this._apellido;
+    }
+    nombreCompleto(){
+        return this._nombre+' '+this._apellido;
+    }  
+}
+
+class Cliente extends Persona{
+    constructor(cedula, nombre, apellido, idCliente){
+        super(cedula, nombre, apellido);
+        this._idCliente=idCliente;
+    }
+    set idCliente(idCliente){
+        this._idCliente=idCliente;
+    }
+    get idCliente(){
+        return this._idCliente;
+    }
+    infocliente(){
+        return this._nombre+' '+ this._apellido+', con cédula '+ this._cedula+ ', e id '+ this._idCliente;
+    }
+}
+
+class Empleado extends Persona{
+    constructor(cedula, nombre, apellido, idEmpleado, legajo){
+        super(cedula, nombre, apellido);
+    this._idEmpleado=idEmpleado;
+    this._legajo=legajo;
+    }
+    get idEmpleado(){
+        return this._idEmpleado;
+    }
+    set idEmpleado(idEmpleado){
+        this._idEmpleado=idEmpleado;
+    }
+    get legajo(){
+        return this._legajo;
+    }
+    set legajo(legajo){
+        this._legajo=legajo;
+    }
+    infoEmpleado(){
+        return this._nombre+' '+ this._apellido+', con cédula '+ this._cedula+ ', id '+ this._idEmpleado + ' y legajo '+this._legajo;
+    }
+}
+
+class Ventas{
+    constructor(idVenta,venta){
+        this._idVenta=idVenta;
+        this._venta=venta;
+    }
+}
+
+//Creación de Clientes
+var cli1=new Cliente(1001010,"Santiago","Sierra",1);
+var cli2=new Cliente(1002020,"Andrés","Marciano",2);
+
+//Creación de Empleados
+var emp1=new Empleado(1003030,"José","Miraflores",1,10);
+
+//Creación de Ventas
+var ventas=[];
+
+var ventas2=[];
+
+ventas.push(cli1,emp1);
+ventas2.push(cli2,emp1);
+
+var venta1=new Ventas(1,ventas);
+var venta2=new Ventas(2,ventas2);
+
+//Una Venta está compuesta por un empleado y un cliente
+console.log(venta1);
+console.log(venta2);
+        </pre>
+        <button class="cod" onclick="codigo3M()">Mostrar Código</button><br>
+        <button class="cod" onclick="codigo3O()">Ocultar Código</button> 
+        <p style="text-align: center;">Si quieres ver el código en GITHUB ve a el siguiente link.
+        <br><a href="https://cutt.ly/AE0xczs"><-- ESTE LINK --></a></p> 
       </div>
     </div>
     <!-- Lo relacionado con el Manual de usuario -->
@@ -204,6 +486,8 @@
       <a name="acerca"></a>
         <h1>Acerca de mi</h1>
         <p class="texto1"><strong>Yo<br></strong>Soy un estudiante del tecnológo ADSI en el SENA<br>
+          Tengo 18 años <br>
+          Tengo conocimiento en diferentes lenguajes como: JavaScript, HTML, CSS, PHP. <br>
           Esta página es una pequeña parte de mi poder como programador, cada día voy siendo mucho mejor en lo que hago.
           <br> <br>
         </p>

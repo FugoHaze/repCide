@@ -12,12 +12,12 @@
     <h2>Formulario</h2>
     <div>
         <form action="../Controlador/controladorFunciones.php" method="POST">
-            <p><input class="inp" type="text" name="cedula" id="cedula" placeholder="Cédula"> <br> </p>
-            <p><input class="inp" type="text" name="name" id="name" placeholder="Nombres"> <br> </p>
-            <p><input class="inp" type="text" name="apellido1" id="apellido1" placeholder="Apellido 1"> <br> </p>
-            <p><input class="inp" type="text" name="apellido2" id="apellido2" placeholder="Apellido 2"> <br> </p>
-            <p><input class="inp" type="email" name="correo" id="correo" placeholder="Correo"> <br> </p>
-            <p><input class="inp" type="password" name="contra" id="contra" placeholder="Contraseña"> <br> </p>
+            <p><input class="inp" type="text" name="cedula" id="cedula" placeholder="Cédula" required> <br> </p>
+            <p><input class="inp" type="text" name="name" id="name" placeholder="Nombres" required> <br> </p>
+            <p><input class="inp" type="text" name="apellido1" id="apellido1" placeholder="Apellido 1" required> <br> </p>
+            <p><input class="inp" type="text" name="apellido2" id="apellido2" placeholder="Apellido 2" required> <br> </p>
+            <p><input class="inp" type="email" name="correo" id="correo" placeholder="Correo" required> <br> </p>
+            <p><input class="inp" type="password" name="contra" id="contra" placeholder="Contraseña" required> <br> </p>
 
             <br>
             <input class="inp" type="submit" value="Registrar" name="reg">
